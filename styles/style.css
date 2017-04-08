@@ -1,100 +1,105 @@
+/* Still need to set mouse cursor correctly */
+
 body {
-	margin: 0;
+    font-family: sans-serif;
 	font-size: 13px;
-	font-family: sans-serif;
+    min-width: 1000px;
+    min-height: 500px;
+    margin: 0;
 }
 
 ul {
-	display: flex;
-	position: absolute;
-	right: 0;
-	margin: 0 20px;
-	align-items: center;
-	justify-content: center;
+	margin: 0;
+	padding:0;
+	list-style-type: none; /* remove marker/bullet */
 }
 
-li {
-	margin: 0 10px;
-	display: inline;
-	list-style-type: none;
-}
-
-a:link, a:visited {
-	text-decoration: none;
-	color: grey;
+a {
+    text-decoration: none; /* remove underline */
+    color: grey;
 }
 
 a:hover {
 	text-decoration: underline;
-	color:black;
 }
 
-.navbar {
-	margin: 15px 0 30px 0;
-	/*position: relative;*/
-	height: 10px;
+#header {
+    text-align: right;
+	margin-right: 18px;
+    margin-top: 18px;
 }
 
-.navbar #login {
-    background-color: #4484F0;
-    color: #fff;
-    margin-right: 30px;
-    font-weight: bold;
-    padding-left: 13px;
-    padding-right: 13px;
-    opacity: 1;
-}
-
-.navbar #login:active {
-    background-color: #3E76D5;
-}
-
-.navbar #login:hover {
-    text-decoration: none;
-    cursor: default;
-}
-
-#apps, #notifications {
-	opacity: 0.5;
-}
-
-#apps:hover, #notifications:hover {
-	opacity: 0.8;
-}
-
-.search {
-	display: block;
-	width: 800px;
-	height: 300px;
-	margin: 153px auto 0;
-}
-
-#logo {
-	display:block;
-	margin: 0 auto 30px;
-}
-
-#i_text {
-	display:block;
-	height: 45px;
-	width: 588px;
-	margin: 0 auto 30px;
-	border: 0.5px solid #d9d9d9;
-}
-
-#i_text:hover {
-	box-shadow: 0px 2px 8px #dddddd;
-	outline: none;
-}
-
-#i_buttons {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-input[type="submit"]:first-child {
+#header li {
+    display: inline-block;
 	margin-right: 12px;
+}
+
+#header #apps {
+    opacity: 0.5;
+    vertical-align: middle;
+}
+
+#header #apps:hover {
+    opacity: 0.8;
+}
+
+#header #sign-in {
+    height: 30px;
+    width: 70px;
+    border: none;
+	background-color: #08f;
+	color: white;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+#header #sign-in {
+    outline: none; /* don't draw a box around this item when it gets focus */
+}
+
+#search {
+    width: 600px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search #logo {
+    display: block; /* is inline by default */
+    margin: 0 auto; /* center the image */
+    padding-bottom: 25px;
+}
+
+#search #searchText {
+    font-size: 16px;
+    width: 600px;
+    height : 42px;
+	box-shadow: 0px 1px 1px 0px lightgrey; /* horizontal vertical blur spread color */
+    transition-duration: 200ms;
+	border: 0.5px solid #d9d9d9;
+	border-radius: 3px;
+    padding-left: 15px;
+}
+
+#search #searchText:focus {
+    outline: none; /* don't draw a box around this item when it gets focus */
+}
+
+#search #searchText:hover {
+    box-shadow: 1px 2px 5px 1px lightgrey; /* horizontal vertical blur spread color */
+    transition-duration: 200ms;
+}
+
+#search #searchButtons {
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* andrea morrow has a good project */
+
+input[type="submit"]:first-child  {
+	margin-right: 5px;
 }
 
 input[type="submit"] {
@@ -112,28 +117,30 @@ input[type="submit"]:hover {
 	border:0.5px solid #d9d9d9;
 }
 
-.footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	background-color: #f2f2f2;
-	/*display: flex;*/
-	justify-content: space-between;
-	height: 40px;
-	align-items: center;
-	border-top: 0.5px solid #d9d9d9;
-}
-/*
-.footer li {
-	margin: 10px;
+#footer {
+    height: 40px;
+    border-top: 1px solid #e4e4e4;
+    background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.left {
-	margin-left: 20px;
+#footerLeft {
+	float:left;
+    padding: 0 0 0 20px; /* top right bottom left */
 }
 
-.right {
-	margin-right: 20px;
+#footerRight {
+	float:right;
+    padding: 0 20px 0 0; /* top right bottom left */
 }
-*/
+
+#footerLeft li,#footerRight li {
+	float: left;
+}
+
+#footerLeft li a, #footerRight li a {
+    display: block;
+    padding: 12px;
+}

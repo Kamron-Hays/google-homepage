@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>My Google</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-    <div class="navbar">
-        <ul>
-            <li><a href="#">Gmail</a></li>
-            <li><a href="#">Images</a></li>
-            <li><a href="#"><img id="apps" src="images/apps.png" alt="Apps"></a></li>
-            <li><a href="#" id="login" href="#">Sign in</a></li>
-        </ul>
-    </div>
-    <div class="search">
-        <img id="logo" src="images/logo.png" alt="logo">
-        <form>
-            <input id="i_text" type="text" name="search_for">
-            <div id="i_buttons">
-                <input type="submit" name="g_search" value="Google Search">
-                <input type="submit" name="feel_lucky" value="I'm feeling lucky">
-            </div>
-        </form>
-    </div>
-    <div class="footer">
-        <div class="left">
+	<head>
+		<title>Google</title>
+        <link rel="icon" type="image/x-icon" href="images/google.ico" />
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	</head>
+	<body>
+        <div id="header">
             <ul>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="#"><img id="apps" src="images/apps.png" alt="Apps"></a></li>
+                <li><a href="#"><button id="sign-in">Sign in</button></a></li>
+            </ul>
+        </div>
+		<div id="search">
+			<img id="logo" src="images/Google.png" alt="Google">
+            <form id="searchForm">
+                <input id="searchText" type="text" name="searchText">
+                <div id="searchButtons">
+                    <input type="submit" value="Google Search" name="search">
+                    <input type="submit" value="I'm Feeling lucky" name="lucky">
+                </div>
+            </form>
+		</div>
+        <div id="footer">
+            <ul id="footerLeft">
                 <li><a href="#">Advertising</a></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">About</a></li>
             </ul>
-        </div>
-        <div class="right">
-            <ul>
+            <ul id="footerRight">
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Terms</a></li>
                 <li><a href="#">Settings</a></li>
             </ul>
         </div>
-    </div>
-</body>
+	</body>
 </html>
